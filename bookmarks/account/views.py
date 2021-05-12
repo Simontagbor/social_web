@@ -33,5 +33,4 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def dashboard(request):
-    context = {'section':'dashboard'}
-    return render('account/dashboard.html', context)
+    return render(request, 'account/dashboard.html', {'section': 'dashboard'})
