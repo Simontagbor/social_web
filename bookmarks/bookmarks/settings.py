@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig',
+    'django.contrib.admin',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,9 @@ PROJECT_PATH = os.path.abspath(os.path.dirname(__name__))
 STATICFILES_DIRS = [
     os.path.join(PROJECT_PATH, 'static')
 ]
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
