@@ -13,12 +13,12 @@ p {
 }
 
 a {
-    color: #12c064;
+    color: #c0128c;
     text-decoration: none;
 }
 
 a:hover {
-    color: #00a74f;
+    color: #0078a7;
 }
 
 h1,
@@ -50,14 +50,14 @@ ol {
     font-size: 14px;
     background: #0c9c9598;
     color: #fff;
-    border-bottom: 4px solid #1cdf78;
+    border-bottom: 4px solid #abdf1c;
     overflow: auto;
     color: #c01e12;
     text-decoration: none;
 }
 
 a:hover {
-    color: #00a74f;
+    color: #a70091;
 }
 
 h1,
@@ -89,7 +89,7 @@ ol {
     font-size: 14px;
     background: #7212c0;
     color: #fff;
-    border-bottom: 4px solid #1cdf78;
+    border-bottom: 4px solid #1cdfcf;
     overflow: auto;
 }
 
@@ -115,7 +115,7 @@ ol {
 
 #header ul.menu li.selected a,
 #header ul.menu li.selected a:hover {
-    color: #1b6d32;
+    color: #6d1b5f;
     font-weight: bold;
 }
 
@@ -272,7 +272,7 @@ textarea {
 input[type=submit],
 a.button {
     font-weight: bold;
-    background: #12c064;
+    background: #1272c0;
     color: #fff;
     padding: 10px 20px;
     font-size: 14px;
@@ -434,7 +434,7 @@ a.follow {
     width: 220px;
     height: 300px;
     margin: 0 10px 10px 10px;
-    border-top: 8px solid #12c064;
+    border-top: 8px solid #1289c0;
     background: #eee;
 }
 
@@ -557,7 +557,7 @@ a.follow {
     width: 220px;
     height: 300px;
     margin: 0 10px 10px 10px;
-    border-top: 8px solid #12c064;
+    border-top: 8px solid #1240c0;
     background: #eee;
 }
 
