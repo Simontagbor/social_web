@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm
 from django.contrib.auth.decorators import login_required
-
+from .models import Profile
 # Create your views here.
 # def user_login(request):
 #     """a view to authenticate user against
@@ -46,6 +46,7 @@ def  register(request):
                 user_form.cleaned_data['password'])
             # save the User object
             new_user.save()
+            Profile.objects.create(user=new_user)
             context = {'new_user':new_user}
             return render(request, 'account/register_done.html', context)
     else:
