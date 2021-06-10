@@ -8,7 +8,12 @@
   <p>oou checkout your Dashboard
     {{ request.user.username }}
     !!   <br>how cool is that?</br>
+  <p>
+    you can  <a href="{% url 'edit' %}">edit your profile</a> or
+    <a href="{% url 'password_change' %}">change your password</a>
+  </p>
   </p>
 {% endblock  %}
+
 
 
