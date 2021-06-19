@@ -95,10 +95,27 @@
       {% block content %} {% endblock %}
 
     </div>
+<<<<<<< HEAD
 
     <script src="{% static 'js/preload.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/jquery-ui.min.js' %}" type="text/javascript"></script>
     <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
   </body>
+=======
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li class="{{ message.tags }}">
+            {{ message|safe }}
+            <a href="#" class="close">X</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <div id="content">
+        {% block content %} {% endblock %}
+    </div>
+</body>
+>>>>>>> messages
 
 </html>
