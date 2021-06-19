@@ -2,14 +2,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <title>{% block title %}{% endblock %}</title>
-    <link href="{% static 'css/base.css' %} " rel="stylesheet ">
-</head>
+    <link href="{% static 'css/base.css' %} " rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/utilities.css' %}" rel="stylesheet" type="text/css">
+    <script>
+        window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-136929707-1');
+    </script>
+  </head>
 
-<body>
-    <div id="header">
-        <span class="logo">Bookmarks</span> {% if user.is_authenticated %}
+  <body data-new-gr-c-s-check-loaded="14.1008.0" data-gr-ext-installed="" style="overflow:visible;">
+    <!-- <nav class="Menu Menu--main" style="visibility:visible; opacity: initial;">
+      <div class="Container--Menu" id="header">
+        <span class="logo">Bookmarks</span>
+        {% if user.is_authenticated %}
         <ul>
             <li {% if section == 'dashboard' %}class='selected' {% endif %}>
                 <a href="{% url 'dashboard' %}">My Dashboard</a>
@@ -21,6 +33,7 @@
                 <a href="#">People</a>
             </li>
         </ul>
+
         {% endif %}
         <span class="user">
         {% if request.user.is_authenticated %}
@@ -33,10 +46,59 @@
           <a href="{% url 'register' %}">Register</a>
         {% endif %}
       </span>
+      </div>
+    </nav>
+    <!--  -->
+    <main class="About">
+      <div class="Preload u-positionR" style="display:list-item; visibility:inherit;">
+        <div class="u-fontSize-h4 u-text-white u-fontWeight-bold u-fontPlayfair u-positionA" id="Preload-logo">
+            <span class="D"> Book </span>
+            <span class="A u-text-darkerBlack"> marks </span>
+        </div>
+      </div>
+      <nav class="Menu Menu--main" style="visibility:unset; opacity:unset;">
+        <div class="Container--Menu">
+            <div class="Container-flex u-alignItems-center u-height100">
+                <div class="u-fontSize-h4 u-fontWeight-black u-fontPlayfair" id="logo">
+                    <span class="daniel">
+                        <a href="https://danielautry.com/" class="link-white u-text-black">Bookmarks</a>
+                    </span>
+                </div>
+                <div class="">
+                    <div class="Menu-item">
+                        <div class="u-fontSize-p4" id="Menu-portfolio">
+                            <a href="https://danielautry.com/#portfolio" class="link-white u-text-black">Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="Menu-item">
+                        <div class="u-fontSize-p4 u-fontWeight-bold" id="Menu-about">
+                            <a href="https://danielautry.com/about.html" class="link-white u-text-black">About</a>
+                        </div>
+                    </div>
+                    <div class="Menu-item">
+                        <div class="u-fontSize-p4" id="Menu-resume">
+                            <a href="https://danielautry.com/pdf/AutryDanielResume.pdf" target="_blank" class="link-white u-text-black">Resume</a>
+                        </div>
+                    </div>
+                    <div class="Menu-item">
+                        <div class="u-fontSize-p4" id="Menu-contact">
+                            <a href="https://danielautry.com/#contact" class="link-white u-text-black">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </nav>
+    </main>
+   
+    <div class="Container-wrapper--alt" id="content">
+      {% block content %} {% endblock %}
+
     </div>
-    <div id="content">
-        {% block content %} {% endblock %}
-    </div>
-</body>
+
+    <script src="{% static 'js/preload.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery-ui.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/jquery.min.js' %}" type="text/javascript"></script>
+  </body>
 
 </html>
